@@ -8,7 +8,7 @@ import DarkModeSwitch from "./DarkModeSwitch";
 export default function Menu() {
   const [showOptions, setShowOptions] = useState(false);
   return (
-    <div className="sm:w-[80%] ">
+    <div className="sm:w-[80%]" onMouseLeave={() => setShowOptions(false)}>
       <GiHamburgerMenu className="sm:hidden relative" size={25} onClick={() => setShowOptions(!showOptions)} />
       {showOptions && (
         <div className="sm:hidden flex absolute right-0 items-start min flex-col w-[40%]  bg-gray-100 text-black gap-6 min-h-screen pl-4 pt-4 ">
