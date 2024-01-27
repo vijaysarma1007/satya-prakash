@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function ContactPage() {
   const [state, formAction] = useFormState(contactUs, undefined);
   const router = useRouter();
-
+  //content
   useEffect(() => {
     state?.success && router.push("/");
   }, [state?.success, router]);
