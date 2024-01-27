@@ -20,10 +20,10 @@ export default function Menu() {
   }
   return (
     <>
-      <div className="sm:hidden sm:w-[80%] h-full " onMouseLeave={() => setShowOptions(false)}>
+      <div className=" " onMouseLeave={() => setShowOptions(false)}>
         <GiHamburgerMenu className="sm:hidden relative" size={25} onClick={closeWindows} />
         {showOptions && (
-          <div className="flex absolute right-0 items-start min flex-col w-[40%] bg-gray-100 text-black gap-6 pl-4 pt-4 h-[500px] overflow-y-scroll">
+          <div className="flex absolute right-0 items-start min flex-col w-[60%] bg-gray-100 text-black gap-6 pl-4 pt-4 h-[500px] overflow-y-scroll">
             <div className="flex w-full justify-evenly">
               <DarkModeSwitch />
               <RxCross2 size={25} onClick={closeWindows} />
@@ -42,16 +42,22 @@ export default function Menu() {
             <div>Contact</div>
             <div>Contact</div>
             <div>follow on: </div>
-            <div className="text-2xl flex gap-1 cursor-pointer">
+            <div className="text-4xl flex cursor-pointer w-full justify-evenly">
               <FaFacebookSquare />
               <FaInstagramSquare />
               <FaSquareThreads />
               <FaTwitter />
             </div>
-            <div className="flex space-x-2 items-center border border-green-400 p-2 bg-green-400 rounded-lg font-semibold mr-2 mb-4">
+
+            <Link
+              className="flex space-x-2 items-center justify-center border border-green-400 p-2 bg-green-400 hover:bg-green-500 rounded-lg font-semibold mb-4 w-[90%]"
+              href="https://wa.me/+918249518465"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp size={25} />
               <span>WhatsApp</span>
-            </div>
+            </Link>
           </div>
         )}
       </div>
