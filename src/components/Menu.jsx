@@ -41,7 +41,7 @@ export default function Menu() {
             <div>Contact</div>
             <div>Contact</div>
             <div>Contact</div>
-            <div>follow on: </div>
+            <div className="w-full text-center underline font-semibold">follow on </div>
             <div className="text-4xl flex cursor-pointer w-full justify-evenly">
               <FaFacebookSquare />
               <FaInstagramSquare />
