@@ -1,17 +1,13 @@
 import React from "react";
-import DarkModeSwitch from "./DarkModeSwitch";
-
 import Image from "next/image";
-import Services from "./Services";
 import Link from "next/link";
-import Blog from "./Blog";
 import Menu from "./Menu";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 w-full dark:bg-white bg-gray-500 text-white dark:text-black flex  justify-evenly items-center sm:pr-5">
+    <header className="sticky top-0 w-full dark:bg-gray-100 bg-gray-500  dark:text-black flex  justify-evenly items-center sm:pl-10">
       <Link href={"/"} className="cursor-pointer ">
-        <Image src="/logo.png" width={125} height={125} />
+        <Image src="/logo.png" width={125} height={125} alt="logo of satya prakash" />
       </Link>
       <Menu />
     </header>
