@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-[50%] h-full hidden sm:inline-flex items-center justify-center">
-        <Image src="/hero.png" width={700} height={600} className="" alt="Picture of Dr. M Satya Parakash" />
+        <Image src="/hero.png" width={700} height={600} className="" alt="Picture of Dr. M Satya Parakash" priority />
       </div>
     </div>
   );
