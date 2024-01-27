@@ -40,7 +40,11 @@ export default function Menu() {
             <div>Log in</div>
             <div>Contact</div>
             <div>Contact</div>
-            <div>Contact</div>
+            <div>
+              <Link href={"/contact"} className="cursor-pointer">
+                Contact
+              </Link>
+            </div>
             <div className="w-full text-center underline font-semibold">follow on </div>
             <div className="text-4xl flex cursor-pointer w-full justify-evenly">
               <FaFacebookSquare />
@@ -70,7 +74,11 @@ export default function Menu() {
         <div>Training</div>
         <div>Admin</div>
         <div>Log in</div>
-        <div>Contact</div>
+        <div>
+          <Link href={"/contact"} className="cursor-pointer">
+            Contact
+          </Link>
+        </div>
         <DarkModeSwitch />
       </div>
     </>
