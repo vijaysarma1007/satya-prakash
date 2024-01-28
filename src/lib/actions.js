@@ -1,5 +1,6 @@
 "use server";
 import { connectToDb } from "@/app/layout";
+connectToDb();
 import { Contact } from "./model";
 
 export const contactUs = async (previousState, formData) => {
@@ -14,7 +15,6 @@ export const contactUs = async (previousState, formData) => {
   }
 
   try {
-    connectToDb();
     const newContact = new Contact({
       firstName,
       surName,
