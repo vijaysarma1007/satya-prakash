@@ -12,20 +12,25 @@ export const contactUs = async (previousState, formData) => {
     return { error: "already found" };
   }
 
-  const newContact = new Contact({
-    firstName,
-    surName,
-    lastName,
-    email,
-    city,
-    country,
-    description,
-    state,
-    address,
-    phoneNumber,
-    whatsappNumber,
-  });
+  try {
+    const newContact = new Contact({
+      firstName,
+      surName,
+      lastName,
+      email,
+      city,
+      country,
+      description,
+      state,
+      address,
+      phoneNumber,
+      whatsappNumber,
+    });
 
-  await newContact.save();
-  return { success: true };
+    await newContact.save();
+    return { success: true };
+  } catch (error) {
+    console.log(error);
+    return;
+  }
 };
