@@ -38,8 +38,6 @@ export default function Menu() {
             <div>Admin</div>
             <div>Training</div>
             <div>Log in</div>
-            <div>Contact</div>
-            <div>Contact</div>
             <div>
               <Link href={"/contact"} className="cursor-pointer">
                 Contact
@@ -65,7 +63,7 @@ export default function Menu() {
           </div>
         )}
       </div>
-      <div className="hidden sm:flex sm:w-[100%] bg-gray-100 sm:bg-transparent sm:justify-evenly">
+      <div className="hidden sm:flex sm:w-[100%] bg-gray-100 sm:bg-transparent sm:justify-evenly text-white dark:text-black">
         <Services />
         <Blog />
         <div className={`${pathname === "/about" && "underline"}`}>

@@ -1,5 +1,5 @@
 "use server";
-import { connectToDb } from "@/app/layout";
+import { connectToDb } from "./utils";
 connectToDb();
 import { Contact } from "./model";
 
