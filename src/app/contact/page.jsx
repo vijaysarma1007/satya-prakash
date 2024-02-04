@@ -1,14 +1,17 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { contactUs } from "@/lib/actions";
 import { useFormState } from "react-dom";
 import { useRouter } from "next/navigation";
 export default function ContactPage() {
   const [state, formAction] = useFormState(contactUs, undefined);
   const router = useRouter();
+
+  const [submitted, setSubmitted] = useState(false);
   //content
   useEffect(() => {
     state?.success && router.push("/");
+    state?.success && setSubmitted(false);
   }, [state?.success, router]);
 
   return (
@@ -33,7 +36,9 @@ export default function ContactPage() {
         <input type="text" placeholder="Phone Number" name="phoneNumber" required className="w-[75%] h-10 placeholder:text-black placeholder:pl-2 bg-blue-50 rounded-md" />
         <input type="text" placeholder="WhatsApp Number" name="whatsappNumber" className="w-[75%] h-10 placeholder:text-black placeholder:pl-2 bg-blue-50 rounded-md" />
         {state?.error}
-        <button className="border-blue-400 border w-[75%] h-10">Submit</button>
+        <button onClick={() => setSubmitted(true)} className={`border-blue-400 border w-[75%] h-10 ${submitted && "animate-pulse"}`}>
+          {submitted ? "Please Wait..." : "Submit"}
+        </button>
       </form>
     </div>
   );
